@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<h>Type anything slow</h>
+<form id="form"><textarea type="text" id="txt" onkeydown="gophim()"></textarea></form>
+    <script>
+        var myname=["T","U","A","N","D","E","P","T","R","A","I","!"];
+        let kq="";
+        function gophim() {
+            let a=document.getElementById("txt").value;
+            let j=a.length;
+            if(j>11 ){
+                for (var i=1;i<=j;i++){
+                    kq= kq +myname[i];
+                    if (i==12){
+                        document.getElementById("txt").value="";
+                        kq="";
+                    }
+                }
+            }
+            document.getElementById("txt").value=kq;
+            kq="";
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>good-fast-cheap</title>
+    <style>
+        .good{
+            width: 25px;
+            height: 25px;
+            background: red;
+            border-radius: 50%;
+            border: 1px solid green;
+            position: absolute;
+            outline: none;
+        }
+        .thanh{
+            width: 60px;
+            height: 15px;
+            background: #FFEB3B;
+            border-radius: 15px;
+            position: absolute;
+            top: 5px;
+            z-index: -1;
+        }
+        .bao{
+            position: relative;
+            height: 59px;
+        }
+    </style>
+</head>
+<body>
+<div class="bao" >
+    <div class="thanh"></div>
+    <button id="good1" class="good" onclick="toggle()"></button>
+</div>
+<div class="bao" >
+    <div class="thanh"></div>
+    <button id="good2" class="good" onclick="toggle()"></button>
+</div>
+<div class="bao" >
+    <div class="thanh"></div>
+    <button id="good3" class="good" onclick="toggle()"></button>
+</div>
+
+<script>
+
+
+
+    function toggle (btn) {
+        var btn1 = document.getElementById("good1");
+        var btn2 = document.getElementById("good2");
+        var btn3 = document.getElementById("good3");
+        if (!btn1.bat && !btn3.bat){
+            batnut(btn3);
+            batnut(btn1);
+            tatnut(btn2);
+        }else {
+            batnut(btn2);
+            tatnut(btn1);
+        }
+
+
+
+    }
+
+    function  batnut(btn) {
+        btn.bat = !btn.bat;
+        btn.style.left = "40px";
+    }
+    function  tatnut(btn) {
+        btn.bat = !btn.bat;
+        btn.style.left = "0px";
+    }
+</script>
+</body>
+</html>

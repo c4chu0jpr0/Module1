@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>namnhuan</title>
+</head>
+<body>
+<script>
+    let year = parseInt(prompt("Enter a year"));
+    let a=false;
+    let chiahetcho4=year%4==0;
+        if (chiahetcho4){
+            let chiahetcho100=year%100==0;
+            if (chiahetcho100){
+                let chiahetcho400=year%400==0;
+                if (chiahetcho400){
+                    a=true
+                }
+            }
+        } else{
+            a=true
+        }
+    if(a){
+        alert(year +" la nam nhuan");
+    }else {
+        alert(year+ " la nam ko nhuan");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<h>Từ điển anh- việt</h>
+<form>
+    <label><input type="text" id="class"></label> <input type="button" value="Search" onclick="check()">
+</form>
+
+<script>
+    let x = ["bronze", "silver", "gold", "platium", "diamond", "master", "challenger"];
+    let y = ["đồng", "bạc", "vàng", "bạch kim", "kim cương", "cao thủ", "thách đấu"];
+    function check() {
+        let kq = document.getElementById("class").value;
+        for (let i=0;i<x.length;i++){
+            if(kq === x[i]){
+                kq = y[i];
+                alert(kq);
+                break;
+            }else if(i == x.length -1){
+                alert("dùng google nhé bạn!");
+            }
+        }
+    }
+</script>
+</body>
+</html>

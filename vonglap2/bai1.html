@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vong lap 2</title>
+</head>
+<body>
+<script>
+    let moto, i, j, a;
+    moto="<table border='1' width='300' cellspacing='0' cellpadding='10'>";
+    for(i=1;i<10;i++){
+        moto= moto +'<tr>';
+        for(j=2;j<10;j++){
+            a=j*i;
+            moto= moto+ '<td>' + j+"x"+i+"="+a+ '</td>';
+        }
+        moto=moto+"</tr>";
+    }
+    moto=moto+ '</table>';
+    document.write(moto);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<h>Đảo ngược số nguyên</h><br>
+<input type="text" id="swapmang">
+<input type="button" value="nhập giá trị" onclick="nhanGT()">
+<input type="button" value="đảo ngược số" onclick="xuat()">
+<script>
+    let x=0
+    let arr=Array();
+    function nhanGT() {
+        arr[x]=document.getElementById("swapmang").value;
+        alert(arr[x] + " :Đã được nhận vào mảng");
+        x++;
+        document.getElementById("swapmang").value= "";
+    }
+    function xuat() {
+        let swap=arr.reverse();
+        let swapJoin=swap.join();
+        document.write(swapJoin);
+    }
+</script>
+</body>
+</html>

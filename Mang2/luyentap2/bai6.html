@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<h>Nhập kí tự:</h><br>
+<input type="text" id="nhap">
+<input type="button" value="lưu giá trị" onclick="luutru()">
+<input type="button" value="truy suất" onclick="truysuat()">
+<script>
+    let x=0;
+    let arr=Array();
+    function luutru() {
+        arr[x]=document.getElementById("nhap").value;
+        alert(arr[x] + " :đã được lưu trữ");
+        x++;
+        document.getElementById("nhap").value="";
+    }
+    function truysuat() {
+        for (let i=0;i<arr.length;i++){
+            if(arr[i]=='-'){
+                arr[i]='_';
+            }
+            document.write(arr[i]);
+        }
+    }
+</script>
+</body>
+</html>

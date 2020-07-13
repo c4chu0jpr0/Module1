@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<h>Type anything slowly</h><br>
+<textarea id="nhap" onkeydown="nhapphim()" style="margin: 0px;height: 110px;width: 250px;"></textarea>
+<script>
+    let myname="gõ đc theo ý mình làm chó!"
+    var count=0;
+    let display="";
+    function nhapphim() {
+        if (display==myname){
+            display="";
+            count = 0;
+        }else {
+            display+=myname[count];
+            count++;
+        }
+        document.getElementById("nhap").value=display;
+    }
+</script>
+</body>
+</html>

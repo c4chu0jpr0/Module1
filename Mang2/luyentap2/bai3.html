@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<h>nhập hàm bẹn eey:</h><br>
+<input type="text" id="Nhap">
+<input type="button" value="Lưu số" onclick="luuso()">
+<input type="button" value="đếm kí tự" onclick="truytim()">
+<script>
+    let dem=0;
+    let x=0;
+    let arr=Array();
+    let cong=0;
+    function luuso() {
+        arr[x]=document.getElementById("Nhap").value;
+        alert(arr[x] + " :Đã được lưu vào mảng");
+        x++;
+        document.getElementById("Nhap").value="";
+    }
+    function truytim() {
+
+        for (let i=0;i<arr.length;i++){
+            dem= dem + arr[i].length;
+            cong++;
+        }
+        document.write("Số lượng kí tự trong mảng lả: "+dem+"<br>");
+        document.write("kích thước: " + cong +" :trong mảng");
+    }
+</script>
+</body>
+</html>

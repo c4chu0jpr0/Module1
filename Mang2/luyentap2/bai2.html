@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<h>Nhập kí tự hoặc số:</h><br>
+<input type="text" id="nhapkitu">
+<input type="button" onclick="xacnhan()" value="nhận giá trị">
+<input type="button" onclick="kiemtra()" value="hô biến">
+<script>
+    let x=0
+    let arr = Array();
+    function xacnhan() {
+        arr[x]=document.getElementById("nhapkitu").value;
+        alert(arr[x]+" :đã được nhập vào mảng");
+        x++;
+        document.getElementById("nhapkitu").value="";
+    }
+    function kiemtra() {
+        let str=arr.reverse();
+        let strjoin=str.join("");
+        document.write(strjoin);
+    }
+</script>
+</body>
+</html>

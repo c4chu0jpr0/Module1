@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhhoahong</title>
+</head>
+<body>
+<div>Nhap doanh so ban dc:<input type="text" id="demo"></div>
+<button type="button" onclick="ketqua()">ket qua</button>
+</body>
+</html>
+<script>
+    function ketqua() {
+        var a = document.getElementById('demo').value;
+        a=parseFloat(a);
+        var b
+        if (a<100000000){
+            b=(a*0.05)+a
+            document.getElementById('demo').value=b;
+        }else if (a<300000000){
+            b=(a*0.1)+a
+            document.getElementById('demo').value=b;
+        }else{
+            b=(a*0.2)+a
+            document.getElementById('demo').value=b;
+        }
+    }
+</script>

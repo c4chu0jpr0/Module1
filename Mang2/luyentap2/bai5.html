@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5 </title>
+</head>
+<body>
+<h>Nhập kí tự hoặc số:</h><br>
+<p>Nhập vào mảng a:<input type="text" id="manga">
+    <input type="button" onclick="chucnanga()" value="nhận giá trị"></p>
+<p>Nhập vào mảng b:<input type="text" id="mangb">
+<input type="button" onclick="chucnangb()" value="nhận giá trị"></p>
+    <input type="button" onclick="check()" value="hô biến">
+<script>
+    let x=0;
+    let y=0;
+    let arr1= Array();
+    let arr2= Array();
+    function chucnanga() {
+        arr1[x]=document.getElementById("manga").value;
+        alert(arr1[x] + " :Đã được lưu vào mảng");
+        x++;
+        document.getElementById("manga").value="";
+    }
+    function chucnangb() {
+        arr2[y]=document.getElementById("mangb").value;
+        alert(arr2[y] + " :Đã được lưu vào mảng");
+        y++;
+        document.getElementById("mangb").value="";
+    }
+    function check() {
+        for (let i=0;i<arr1.length,i<arr2.length;i++) {
+            if (arr1[i] == arr2[i]) {
+                alert("chuỗi giống nhau");
+            } else {
+                alert("chuỗi ko giống nhau");
+                break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

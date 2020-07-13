@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="jquery-1.12.2.js"></script>
+    <meta charset="UTF-8">
+    <title>gamepuzzle</title>
+    <style>
+        .tic1,
+        .tic2,
+        .tic3,
+        .tic4,
+        .tic5
+        {
+            background-image: url("12.png");
+            width: 500px;
+            height: 75px;
+            box-shadow: 1px 1px 3px red;
+            border: 3px solid white;
+            margin: 10px;
+            background-size: cover;
+        }
+        .tic1 {
+            background-position-y: 0%
+        }
+        .tic2 {
+            background-position-y: 20%
+        }
+        .tic3 {
+             background-position-y: 40%
+        }
+        .tic4 {
+            background-position-y: 60%
+        }
+        .tic5 {
+            background-position-y: 80%
+        }
+    </style>
+</head>
+<body>
+<!--<img src="12.png">-->
+<!--<img src="123.jpg">-->
+<!--<img src="1234.jpg">-->
+<div class="tic1 js_1"> </div>
+<div class="tic2 js_1"> </div>
+<div class="tic3 js_1"> </div>
+<div class="tic4 js_1"> </div>
+<div class="tic5 js_1"> </div>
+<script>
+    $(document).ready(
+        function () {
+            $('.js_1').click(function (e) {
+                var div = $(e.currentTarget);
+                div.css('background-image', 'url("123.jpg")');
+            });
+        }
+    );
+
+</script>
+</body>
+</html>

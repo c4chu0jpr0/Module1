@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+
+    function giaithua(n) {
+        let n2=1;
+        let n1=1
+        let k;
+        if(n==0){
+            alert("giai thừa của 0 bằng 1");
+        }else {
+            for (n1;n1<n;n1++){
+            k=n2*(n1+1)
+            n2=k;
+            }
+            alert(k);
+        }
+    }
+    let nhapso=giaithua(parseInt(prompt("nhập giai thừa muốn tính:")));
+</script>
+</body>
+</html>

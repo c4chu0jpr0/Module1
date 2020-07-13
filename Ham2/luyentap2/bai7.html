@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    let num1=parseInt(prompt("nhập số nguyên thứ 1:"));
+    let num2=parseInt(prompt("nhập số nguyên thứ 2:"));
+    swapNumber(num1,num2);
+    function swapNumber(a,b) {
+        let arr=Array();
+        arr[0]=a;
+        arr[1]=b;
+        let swap=arr.reverse();
+        let swapJoin=swap.join();
+        alert(swapJoin);
+    }
+</script>
+</body>
+</html>

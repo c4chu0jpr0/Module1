@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra tuoi</title>
+</head>
+<body>
+<div>Nhap so:<input type="text" id="abc"></div>
+<button type="button" onclick="kiemtra()">check</button>
+</body>
+</html>
+<script>
+    function kiemtra() {
+        var a=document.getElementById('abc').value;
+        a=parseInt(a);
+        if (a>0 && a<120){
+            document.write('la tuoi 1 ng');
+        } else {
+            document.write('la so linh tinh')
+        }
+    }
+</script>

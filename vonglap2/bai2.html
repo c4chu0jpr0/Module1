@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hien thi so nguyen to dau tien</title>
+</head>
+<body>
+<script>
+     let numbers=parseInt(prompt('so luong so nguyen to can in ra:'));
+     let count=0;
+     let N=2;
+     let i=Math.sqrt(N);
+     let j=Math.sqrt(N)+1;
+     let a= numbers*2 -1;
+     while(count < a){
+         if (N!=2 && N%2==0){
+             count++;
+             N++;
+         }else {
+             document.write(N+ ':la so nguyen to'+'<br>');
+             count++;
+             N++;
+         }
+     }
+
+</script>
+</body>
+</html>

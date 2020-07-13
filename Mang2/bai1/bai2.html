@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let a=prompt('nhap so:');
+    let x=a.toString();
+    let kq=[x[0]];
+    for (let i=1;i<x.length;i++){
+        if ((x[i-1]%2 === 0) && (x[i]%2 === 0)){
+            kq.push('-',x[i]);
+        } else {
+           kq.push(x[i]);
+        }
+    }
+document.write(kq.join(''));
+
+</script>
+</body>
+</html>

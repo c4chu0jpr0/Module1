@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<h>Nhập phần tử:</h><br>
+<input type="text" id="nhappt">
+<input type="button" onclick="abc()" value="nhận giá trị">
+<input type="button" onclick="bcd()" value="tính">
+<script>
+    let x=0
+    let array= Array();
+    function abc() {
+        Array[x]=parseInt(document.getElementById("nhappt").value);
+        alert(Array[x] +": phần tử đã được thêm vào mảng");
+        x++;
+        document.getElementById("nhappt").value="";
+    }
+    function bcd() {
+        let max=Array[0];
+        for (let i=0;i<=x;i++){
+            if (Array[i]>max){
+                max=Array[i];
+            }
+        }
+        document.write(max +" :là  giá trị lớn nhất"+"<br>");
+        let total=0
+        for (let i=0;i<x;i++){
+            total += Array[i];
+        }
+        document.write(total+" :là tổng của mảng");
+    }
+</script>
+</body>
+</html>

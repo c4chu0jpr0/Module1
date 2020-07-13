@@ -1,0 +1,16 @@
+#dstable{
+    border: 1px solid black;
+    width: 100%;
+}
+#edit{
+    background-color: #8BC34A;
+    color: white;
+}
+#delete{
+    color: white;
+    background-color: #F44336;
+}
+.abc,
+.abd{
+    color: gold;
+}

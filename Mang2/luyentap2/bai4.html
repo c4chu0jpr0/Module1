@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<h>Đếm số từ trong mảng</h><br>
+<input type="text" id="nhap">
+<input type="button" value="lưu" onclick="kich()">
+<input type="button" value="hô biến" onclick="truytim()">
+<script>
+    let x=0;
+    let arr= Array();
+    let dem=0;
+    function kich() {
+        arr[x]=document.getElementById("nhap").value;
+        alert(arr[x]+" :đã nạp vào mảng");
+        x++;
+        document.getElementById("nhap").value="";
+    }
+    function truytim() {
+        for (let i=0;i<arr.length;i++){
+            var splits=arr[i].split(' ');
+            dem = dem+ splits.length;
+        }
+        document.write(dem);
+    }
+</script>
+</body>
+</html>

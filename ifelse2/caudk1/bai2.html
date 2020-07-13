@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<div><input type="text" id="class"></div>
+<button type="button" onclick="kiemtra()">kiemtra</button>
+</body>
+</html>
+<script>
+    function kiemtra() {
+        var a=document.getElementById('class').value;
+        if (a<16){
+            document.write('hoc sinh ko du dieu kien vao lop 10');
+        }else {
+            document.write('Dat tieu chuan hoc lop 10');
+        }
+    }
+</script>

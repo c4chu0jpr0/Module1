@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sukienchuot</title>
+</head>
+<body>
+<form>
+    <img id="myimage" src="https://kiwisport.vn/wp-content/uploads/2020/01/qua-bong-futsal-3030-pro-chuyen-da-san-5.jpg" style="width: 300px"/>
+    <p>click button below to move the image to right</p>
+    <input type="button" value="turn right" onclick="Moveright();" />
+    <input type="button" value="turn left" onclick="moverleft();"/>
+    <input type="button" value="turn up" onclick="moveup();"/>
+    <input type="button" value="turn down" onclick="movedown();"/>
+</form>
+</body>
+</html>
+<script>
+    let imgobi= null;
+    imgobi=document.getElementById('myimage');
+function init() {
+    imgobi=document.getElementById('myimage');
+    imgobi.style.position= 'relative';
+    imgobi.style.left= '0px';
+    imgobi.style.bottom= '0px';
+}
+function Moveright() {
+    imgobi.style.left=parseInt(imgobi.style.left)+10+'px';
+}
+function moverleft(){
+    imgobi.style.left=parseInt(imgobi.style.left)-10+'px';
+}
+function moveup(){
+    imgobi.style.bottom=parseInt(imgobi.style.bottom)+10+'px';
+}
+function movedown(){
+    imgobi.style.bottom=parseInt(imgobi.style.bottom)-10+'px';
+}
+window.onload= init;
+</script>

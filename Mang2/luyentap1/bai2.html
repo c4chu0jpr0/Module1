@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<h>Nhap so:</h><br>
+<input type="text" id="chu">
+<input type="button" value="Nhap" onclick="nhapso()">
+<input type="button" value="xu ly" onclick="xuly()">
+<script>
+    let x=0;
+    let array = Array();
+    let kq="";
+
+    function nhapso() {
+        Array[x]=parseInt(document.getElementById("chu").value);
+        alert(Array[x]+ ": da duoc chon vang tai vi tri thu: "+x);
+        x++;
+        document.getElementById("chu").value= "";
+    }
+    function xuly() {
+        let a=0
+        let max = Array[0]
+        for (let i=0;i<=x;i++){
+            if (Array[i]>max) {
+                max = Array[i];
+                a=i
+            }
+        }
+        document.write(max + ": la gia tri lon nhat tai vi tri thu;"+a);
+    }
+</script>
+</body>
+</html>

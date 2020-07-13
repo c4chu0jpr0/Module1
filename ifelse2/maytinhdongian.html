@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maytinh</title>
+</head>
+<body>
+<div>
+    <div class="1"><input type="text" value="0" id="nhapso"></div>
+    <div>
+        <table>
+            <tr class="2">
+                <td><button onclick="keyboard(1)">1</button></td>
+                <td><button onclick="keyboard(2)">2</button></td>
+                <td><button onclick="keyboard(3)">3</button></td>
+                <td><button onclick="keyboard('+')">+</button></td>
+            </tr>
+            <tr class="2">
+                <td><button onclick="keyboard(4)">4</button></td>
+                <td><button onclick="keyboard(5)">5</button></td>
+                <td><button onclick="keyboard(6)">6</button></td>
+                <td><button onclick="keyboard('+')">-</button></td>
+            </tr>
+            <tr class="2">
+                <td><button onclick="keyboard(7)">7</button></td>
+                <td><button onclick="keyboard(8)">8</button></td>
+                <td><button onclick="keyboard(9)">9</button></td>
+                <td><button onclick="keyboard('x')">x</button></td>
+            </tr>
+            <tr class="2">
+                <td><button onclick="keyboard('C')">C</button></td>
+                <td><button onclick="keyboard(0)">0</button></td>
+                <td><button onclick="keyboard('=')">=</button></td>
+                <td><button onclick="keyboard('/')">/</button></td>
+            <tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+<script>
+function themso(so) {
+    let sobatdau=document.getElementById("nhapso").value;
+    if (sobatdau == "0"){
+        sobatdau="";
+    }
+    sobatdau = sobatdau + so;
+    document.getElementById("nhapso").value = sobatdau;
+    return sobatdau;
+}
+function xoaso() {
+    var sobatdau=document.getElementById('nhapso').value;
+    sobatdau="0"
+    document.getElementById("nhapso").value=sobatdau;
+    return "0";
+}
+function keyboard(so) {
+    switch (so) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            themso(so);
+            break;
+        case "C":
+            xoaso();
+            break;
+        case '+':
+        case '-':
+        case 'x':
+        case '/':
+            a = parseInt(document.getElementById('nhapso').value);
+            document.getElementById('nhapso').value="0";
+            pheptinh = so;
+            break;
+        case "=":
+            b = parseInt(document.getElementById('nhapso').value);
+            switch (pheptinh){
+                case '+':
+                    kq = a+ b;
+                    break
+                case '-':
+                    kq = a - b;
+                    break
+                case 'x':
+                    kq = a * b;
+                    break;
+                case '/':
+                    kq = a / b;
+                    break;
+                }
+            document.getElementById('nhapso').value=kq;
+
+    }
+
+}
+</script>

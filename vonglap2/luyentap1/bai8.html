@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<button type="button" onclick="batdau()">choi</button>
+<script>
+function batdau() {
+    let a = parseInt(prompt('nhập khoang so tu max-min:')) ;
+    var rdnumber=Math.floor(Math.random()*(a));
+    let i=1
+    for (i;i<4;i++){
+        let b = parseInt(prompt('dự đoán số'));
+        if (b == rdnumber) {
+            document.write('win');
+            return rdnumber;
+        } else {
+            document.write('lose'+"<br>");
+        }
+    }
+}
+</script>
+</body>
+</html>

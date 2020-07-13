@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<h>Đảo ngược phần tử</h><br>
+<input type="text" id="nhapdi">
+<input type="button" value="next" onclick="bamphim()">
+<input type="button" value="hô biến" onclick="kichdi()">
+<script>
+    let x=0;
+    let arr=Array();
+    function bamphim() {
+        arr[x]=parseInt(document.getElementById("nhapdi").value);
+        alert(arr[x] + " :đã được nhập vào mảng có vị trí thứ " +x)
+        x++;
+        document.getElementById("nhapdi").value="";
+    }
+    function kichdi() {
+        let str=arr.reverse();
+        let daonguoc=str.join();
+        document.write(daonguoc);
+    }
+</script>
+</body>
+</html>

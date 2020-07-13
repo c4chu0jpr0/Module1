@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<h>Kiểm tra palindrome</h><br>
+<input type="text" id="nhap">
+<input type="button" value="Thêm giá trị" onclick="addGT()">
+<input type="button" value="kiểm tra palindrome" onclick="checkGT()">
+<script>
+    let x=0
+    let arr = Array();
+    function addGT() {
+        arr[x]=document.getElementById("nhap").value;
+        alert(arr[x]+" :đã thêm vào mảng");
+        x++;
+        document.getElementById("nhap").value="";
+    }
+    function checkGT() {
+            check1();
+            check2();
+    }
+    function check1() {
+        for (let i=0;i<arr.length;i++) {
+            var phanthanhtungchu = arr[i].split("");
+            var daonguocphantachtren = phanthanhtungchu.reverse();
+            var newPT = daonguocphantachtren.join("");
+            if (newPT !== arr[i]) {
+                alert("false");
+            } else {
+                alert("True");
+            }
+        }
+    }
+    function check2() {
+        for (let i=0;i<arr.length;i++) {
+            var phanthanhtungchu = arr[i].split("");
+            var xoa1 = phanthanhtungchu.shift();
+            var xoa2 = phanthanhtungchu.pop();
+            var daonguocxoa2 = phanthanhtungchu.reverse();
+            var newpt = daonguocxoa2.join("");
+            for (let i = 0; i < newpt.length; i++) {
+                if (newpt[i] !== newpt[newpt.length - i - 1]) {
+                    alert("ko phải là palindrome");
+                } else {
+                    alert("phần tử con là palindrome");
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

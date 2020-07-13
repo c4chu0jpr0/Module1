@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tam giac</title>
+</head>
+<body>
+<div>nhap canh a:<input type="text" id="canha"></div>
+<div>nhap canh b:<input type="text" id="canhb"></div>
+<div>nhap canh c:<input type="text" id="canhc"></div>
+<button type="button" onclick="check()">check</button>
+<script>
+    function check() {
+        var a=parseInt(document.getElementById('canha').value);
+        var b=parseInt(document.getElementById('canhb').value);
+        var c=parseInt(document.getElementById('canhc').value);
+        if (a>0 && b>0 && c>0 && (a+b)>c && (b+c)>a && (a+c)>b){
+            document.write('a,b,c tao thanh 1 tam giac');
+        }else {
+            document.write('a,b,c ko tao thanh tam giac');
+        }
+    }
+</script>
+</body>
+</html>

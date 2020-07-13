@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let tiengui=parseFloat(prompt('nhập số tiền gửi ngân hàng:'));
+    let laisuat=parseFloat(prompt('nhap lai suat 1 nam ma ngan hang cam ket:'));
+    let guilai;
+    let tienlai;
+    let i=1;
+    let j=1;
+    for(j;j<=12;j++){
+        for (i;i<=12;i++){
+            tienlai= (tiengui* (laisuat*i*30))/360;
+            document.write(tienlai+'VND :lai tháng thứ '+i+'<br>');
+        }
+        guilai=(tienlai*(laisuat*j*30))/360;
+        document.write(guilai+'VND :thu hồi vốn xong gửi tiếp ứng theo từng tháng'+j +'<br>');
+    }
+</script>
+</body>
+</html>

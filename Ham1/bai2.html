@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<h>Temperature Converter</h>
+<p>type a value in the Fahrenheit field to convert the value to Celcius</p>
+<p>Fahrenheit:<input type="number" id="inputFahrenheit"
+       oninput="TemperatureConverter(this.value)"
+       onchange="TemperatureConverter(this.value)"> <!-- sử dụng 1 trong 2 thẻ này để thay đổi số-->
+<p>Celcius: <span id="outputCelcius"></span></p>
+<script>
+    function TemperatureConverter(num) {
+        num = parseFloat(num);
+        document.getElementById("outputCelcius").innerHTML=(num-32)/1.8;
+    }
+
+
+</script>
+</body>
+</html>

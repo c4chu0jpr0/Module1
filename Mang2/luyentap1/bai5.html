@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<h>đếm số nguyên âm</h><br>
+<input type="text" id="nhap">
+<input type="button" value="nhap" onclick="check()">
+<input type="button" value="suat" onclick="checkout()">
+
+<script>
+    let array = Array();
+    let x=0;
+    let kq="";
+    let dem=0;
+    function check() {
+        Array[x] = parseInt(document.getElementById("nhap").value);
+        alert("gia trị: " + Array[x] + " vừa được nhập và đứng thứ  "+x);
+        x++;
+        document.getElementById("nhap").value = "";
+    }
+    function checkout() {
+        for (let i=0;i<x;i++){
+            if (Array[i]<0){
+                document.write(Array[i]+" :là số nhỏ hơn 0 trong chuỗi và đứng vị trí thứ"+i+"<br>");
+                dem++;
+            }
+        }
+        document.write("tổng số nguyên âm trong chuỗi là: "+dem)
+    }
+</script>
+</body>
+</html>

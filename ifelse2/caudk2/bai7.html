@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pt bac 2</title>
+</head>
+<body>
+<div><h> Giai phuong trinh bac 2:</h></div>
+<div>gia tri a;<input type="text" id="nhapa"></div>
+<div>gia tri b:<input type="text" id="nhapb"></div>
+<div>gia tri c:<input type="text" id="nhapc"></div>
+<button type="button" onclick="tinh()" >tinh</button>
+<div><p id="demo"></p> </div>
+<div><p id="demo1"></p> </div>
+</body>
+</html>
+<script>
+    function tinh() {
+        var a = document.getElementById('nhapa').value;
+        var b = document.getElementById('nhapb').value;
+        var c = document.getElementById('nhapc').value;
+            a=parseInt(a);
+            b=parseInt(b);
+            c=parseInt(c);
+        let delta=(b*b)-(4*a*c);
+        let d=(-b+Math.sqrt(delta))/(2*a);
+        let e=(-b-Math.sqrt(delta))/(2*a);
+
+        if (delta==0){
+            document.getElementById('demo').value=-b/a +'la nhiem x1,x2 pt';
+        }else if (delta>0){
+            document.getElementById('demo').innerHTML=d+'=x1 la nhiem pt';
+            document.getElementById('demo1').innerHTML=e+'=x2 la nhiem pt';
+        }else{
+            document.getElementById('demo').value='pt vo nhiem';
+        }
+    }
+</script>

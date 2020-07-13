@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 4</title>
+</head>
+<body>
+<script>
+    let moto , i ,j;
+    moto="<table>";
+    for (i=1;i<=10;i++){
+        moto= moto +"<tr>";
+        for (j=1;j<=10;j++){
+            moto= moto + "<td>"+ i*j + "</td>";
+        }
+        moto= moto + "</tr>";
+    }
+    moto= moto + "</table>";
+    document.write(moto);
+</script>
+</body>
+</html>

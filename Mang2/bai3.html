@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+    <link rel="stylesheet" href="banco.css">
+</head>
+<body>
+<h1>Game caro</h1>
+<div id="class1">
+    <div class="oco" id="00" onclick="hien(0,0)"></div>
+    <div class="oco" id="01" onclick="hien(0,1)"></div>
+    <div class="oco" id="02" onclick="hien(0,2)"></div>
+</div>
+<div id="class2">
+    <div class="oco" id="10" onclick="hien(1,0)"></div>
+    <div class="oco" id="11" onclick="hien(1,1)"></div>
+    <div class="oco" id="12" onclick="hien(1,2)"></div>
+</div>
+<div id="class3">
+    <div class="oco" id="20" onclick="hien(2,0)"></div>
+    <div class="oco" id="21" onclick="hien(2,1)"></div>
+    <div class="oco" id="22" onclick="hien(2,2)"></div>
+</div>
+<button type="reset" onclick="choilai()">Reset</button>
+<script>
+    function hien(i,j){
+        let ID = ""+i+j;
+        if (document.getElementById(ID).innerHTML==""){
+            document.getElementById(ID).innerHTML=status;
+            if (status=="X"){
+                status="O";
+            }else {
+                status="X";
+            }
+        }
+        checkWin(ID);
+    }
+    var win=[
+        ['00',"01","02"],
+        ['10',"11","12"],
+        ['20',"21","22"],
+        ['00',"10","20"],
+        ['01',"11","21"],
+        ['02',"12","22"],
+        ['00',"11","22"],
+        ['02',"11","20"],
+    ];
+
+    function checkWin(ID) {
+        for (let arr of win){
+            if (include(ID,arr)){
+                let same= checksame(arr);
+                let lastvalue=document.getElementById(ID).innerHTML;
+                if(same===true){
+                    setTimeout(function () {
+                        alert(lastvalue+" win!!");
+                    }, 200);
+                }
+            }
+        }
+    }
+    function include(ID,arr) {
+        for (let ele of arr){
+            if (ID===ele){
+                return true;
+            }
+        }
+        return false;
+    }
+    function checksame(arr) {
+        var value1=document.getElementById(arr[0]).innerHTML;
+        var value2=document.getElementById(arr[1]).innerHTML;
+        var value3=document.getElementById(arr[2]).innerHTML;
+        if (value1===value2 && value2===value3 && value1.trim()!==""){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function choilai() {
+        for (let arr of win){
+            for (let ID of arr){
+                document.getElementById(ID).innerHTML= "";
+            }
+        }
+    }
+</script>
+</body>
+</html>

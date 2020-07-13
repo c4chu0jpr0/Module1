@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<h>BMI</h>
+<p>Chieu cao:<input type="text" id="chieucao"></p>
+<p>Can nang:<input type="text" id="cannang"></p>
+<button type="button" onclick="check()">check</button>
+</body>
+</html>
+<script>
+    function check() {
+        var a=document.getElementById('chieucao').value;
+        var b=document.getElementById('cannang').value;
+        a=parseFloat(a);
+        b=parseInt(b);
+        c=b/(a*a);
+        if (c<18.5){
+            document.write('underweight');
+        } else if (c<25) {
+            document.write('Normal');
+        } else if (c<30){
+            document.write('overweight');
+        }else {
+            document.write('Obese');
+        }
+    }
+</script>

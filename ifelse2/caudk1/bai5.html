@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xephanghocluc</title>
+</head>
+<body>
+<div>Diem mieng:<input type="text" id="mieng"></div>
+<div>Diem 15 phut:<input type="text" id="15phut"></div>
+<div>Diem giua ky:<input type="text" id="giuaky"></div>
+<div>Diem thi cuoi ki:<input type="text" id="cuoiky"></div>
+<button type="button" onclick="ketqua()" id="kq">Ket qua</button>
+</body>
+</html>
+<script>
+    function ketqua() {
+        var a=parseInt(document.getElementById('mieng').value);
+        var b=parseInt(document.getElementById('15phut').value);
+        var c=parseInt(document.getElementById('giuaky').value);
+        var d=parseInt(document.getElementById('cuoiky').value);
+        let e=(a+b+c*2+d*3)/7;
+        e=parseFloat(e)
+        if (e<3.5){
+            document.write('kem')
+        }else if (e<6.5){
+            document.write('TB')
+        } else if (e<8.5){
+            document.write('tinh tuong')
+        }else if (e<9){
+            document.write('gioi')
+        }else {
+            document.write('xuc sac')
+        }
+    }
+</script>

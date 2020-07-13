@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giai pt bac1</title>
+</head>
+<body>
+<h> Giai phuong trinh bac1:</h>
+<div>gia tri a;<input type="text" id="nhapa"></div>
+<div>gia tri b:<input type="text" id="nhapb"></div>
+<button type="button" onclick="tinh()">tinh</button>
+</body>
+</html>
+<script>
+    function tinh() {
+        var a=parseFloat(document.getElementById('nhapa').value);
+        var b=parseFloat(document.getElementById('nhapb').value);
+        if(a==0){
+            if (b==0){
+                alert('he pt vo so nhiem');
+            }else{
+                alert('he pt vo nhiem');
+            }
+        }else {
+            alert((-b)/a +'la nhiem pt')
+        }
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cuocdienthoai</title>
+</head>
+<body>
+<div>Nhap gia cuoc dien thoai<input type="text" id="dt"></div>
+<button type="button" onclick="giacuoc()">tinh</button>
+</body>
+</html>
+<script>
+    function giacuoc() {
+        var a=document.getElementById('dt').value;
+        a=parseFloat(a);
+        let b=25000;
+        let c;
+        if (a<50){
+            c=b+(a*600);
+            document.getElementById('dt').value=c;
+        } else if (a<200){
+            c=b+(a*400);
+            document.getElementById('dt').value=c;
+        }else {
+            c=b+(a*200);
+            document.getElementById('dt').value=c;
+        }
+    }
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9</title>
+</head>
+<body>
+<h>Nối mảng a và b thành mảng c</h><br>
+<p>mảng a:<input type="text" id="manga">
+    <input type="button" value="lưu" onclick="luu1()"></p><br>
+<p>mảng b:<input type="text" id="mangb">
+    <input type="button" value="lưu" onclick="luu2()"></p><br>
+<p>mảng c:<input type="text" id="mangc">
+    <input type="button" value="lưu" onclick="luu3()"></p><br>
+<input type="button" value="nối mảng" onclick="thucthi()">
+<script>
+    let x=0;
+    let y=0;
+    let z=0;
+    let arr1= Array();
+    let arr2= Array();
+    let arr3= Array();
+    function luu1() {
+        arr1[x]=parseInt(document.getElementById("manga").value);
+        alert(arr1[x]+" :đã được lưu tại vị trí thứ "+x+" trong mảng a" );
+        x++;
+        document.getElementById('manga').value="";
+    }
+    function luu2() {
+        arr2[y]=parseInt(document.getElementById("mangb").value);
+        alert(arr2[y]+" :đã được lưu tại vị trí thứ "+y+" trong mảng b" );
+        y++;
+        document.getElementById('mangb').value="";
+    }
+    function luu3() {
+        arr3[z]=parseInt(document.getElementById("mangc").value);
+        alert(arr2[z]+" :đã được lưu tại vị trí thứ "+z+" trong mảng b" );
+        z++;
+        document.getElementById('mangc').value="";
+    }
+
+    function thucthi() {
+        let str1=arr3.concat(arr1,arr2);
+        let str1join=str1.join();
+        document.write(str1join);
+    }
+</script>
+</body>
+</html>

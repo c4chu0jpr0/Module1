@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<div> <input type="text" id="nhap">
+    <button type="button" onclick="add()">add</button>
+    <button type="button" onclick="display()">display</button>
+</div>
+<div id="result"></div>
+<script>
+    let x=0;
+    let array = Array();
+    function add() {
+        array[x]=document.getElementById('nhap').value;
+        alert("element: " + array[x] +"them gia tri"+x);
+        x++;
+        document.getElementById('nhap').value= ""; // nó trả về giá trị rỗng sau khi bấm add
+    }
+    function display() {
+        let e= '<hr/ >';
+        for (let i=0;i<array.length;i++){
+        e+= "element " + i+ '=' +array[i] +'<br/>';
+        }
+        document.getElementById('result').innerHTML=e;
+    }
+</script>
+</body>
+</html>

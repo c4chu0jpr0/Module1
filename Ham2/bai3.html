@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3:</title>
+    <link rel="stylesheet" href="bai3.css">
+</head>
+<body>
+<form>Add New Production: <input type="text" id="nhapten"><input type="button" value="Add" onclick="addSP()"></form>
+
+<div id="htbang"></div>
+
+<script>
+    let arr1= ["Bạc", "Vàng", "Bạch Kim", "Kim cương", "Urani"];
+    function danhsachSP() {
+        let bang= "<table id='dstable'>";
+        for (let i=0;i<arr1.length;i++){
+            let so=i;
+                bang += "<tr>"+"<td class='abd' >"+ i+"</td>>"+ "<td class='abc'>" +arr1[i] +"</td>"+ "<td>" +"<input id='edit' type='button' value='Edit' onclick='editRow("+so+")'></td>"+"<td>"+ "<input id='delete' type='button' value='Delete' onclick='deleteRow("+so+")'></td>"+"</tr>"
+        }
+        bang += "</table>";
+        document.getElementById("htbang").innerHTML=bang;
+    }
+
+    function addSP() {
+        let themSP=arr1.push(document.getElementById("nhapten").value);
+        alert(themSP+ "đã thêm vào danh sách");
+        danhsachSP();
+        document.getElementById("nhapten").value="";
+    }
+    function editRow(so) {
+        let tenmuonsua=prompt("sửa gì thì sửa đi");
+            arr1.splice(so, 1, tenmuonsua);
+        danhsachSP();
+    }
+    function deleteRow(so) {
+        arr1.splice(so,1);
+        danhsachSP();
+    }
+    danhsachSP();
+</script>
+</body>
+</html>

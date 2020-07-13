@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let arr1=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2=['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function check() {
+        let nhapten=prompt("nhập tên vào đây bạn êy:");
+        let stt=arr1.indexOf(nhapten);
+        if (stt===-1){
+            alert("nhập lại tên bạn êy");
+        }else {
+            alert("Tên: "+ nhapten+ " ứng với sao: "+ arr2[stt])
+        }
+    }
+    let abc=check();
+</script>
+
+</body>
+</html>

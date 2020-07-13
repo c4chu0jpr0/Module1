@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<input type="button" value="nhap" onclick="check()">
+<input type="button" value="suat" onclick="checkout()">
+
+<script>
+    let array = Array();
+    let x=0;
+    let dem=0;
+    let kq="";
+    function check() {
+            Array[x] = document.getElementById("nhap").value;
+            alert("gia trị: " + Array[x] + " vừa được nhập và đứng thứ  "+x);
+            x++;
+            document.getElementById("nhap").value = "";
+    }
+    function checkout() {
+        for (let i=0;i<=10;i++) {
+            if (Array[i] >= 10) {
+                kq = Array[i];
+            document.write(kq + ": co gia tri lon hon 10 "+" vị trí trong mang: "+i+"<br>");
+            dem++;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

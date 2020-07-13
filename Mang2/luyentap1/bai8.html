@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<h>Nhập phần tử</h><br>
+<input type="text" id="Nhap">
+<input type="button" value="lưu số" onclick="luuso()">
+<input type="button" value="hô biến" onclick="change1()">
+<script>
+    let x=0;
+    let arr= Array();
+    function luuso() {
+        arr[x]=parseInt(document.getElementById("Nhap").value);
+        alert(arr[x] +" :đã được thêm vào mảng");
+        x++;
+        document.getElementById("Nhap").value= "";
+    }
+    function change1() {
+        let str=arr.sort(function (a,b) {
+            return b-a;   // thứ tự giảm dần
+        });
+        document.write(str);
+    }
+</script>
+
+</body>
+</html>
